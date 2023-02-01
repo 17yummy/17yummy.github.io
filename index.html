@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <audio src="C:\Users\yummy\Desktop\start\新地 - 心情好点没.mp3" rel="external nofollow"  id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
+
+    
+	<style>
+    audio{
+  display: none;
+}
+	html, #app {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+} 
+body{
+  background-image: url("E:\start-sky-master\start-sky-master\publish_bj.jpg");
+  background-size: cover;
+}
+#app {
+  overflow: hidden;
+  touch-action: pan-up;
+  color: #3bf4ed;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-shadow: 0 0 5px #ffffff, 0 0 20px #000, 0 0 30px #000;
+}
+
+#app h1 {
+  --fontSize: 60px;
+  --lineHeight: 80px;
+  width: auto;
+  height: calc(2 * var(--lineHeight));
+  line-height: var(--lineHeight);
+  margin: calc(50vh - var(--lineHeight)) auto 0;
+  font-size: var(--fontSize);
+  text-transform: uppercase;
+}
+
+#app a {
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+#app canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+}
+    </style>
+
+<script type="text/javascript">
+  window.onload = function(){
+    setInterval("toggleSound()",1);
+  }
+ 
+function toggleSound() {
+  var music = document.getElementById("aud"); 
+  if (music.paused) { 
+    music.paused=false;
+    music.play(); 
+  }    
+}
+</script>
+</head>
+<body>
+	<div id="app">
+    <div id="hero">
+      <h1>你好<br/>李想!</h1>
+      <a target="_blank" href="start.html" >Click me!!</a>
+    </div>
+  </div>
+
+</body>
